@@ -1,0 +1,230 @@
+/* --- 1. Басты баптаулар (Reset & Core) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* --- 2. Навигация (Header / Navbar) --- */
+.navbar {
+    background-color: #0d1b2a;
+    padding: 10px 30px;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e63946;
+}
+
+/* --- 3. Басты баннер (Hero Section) --- */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('images/01ac2515ea35536628493a8e32ab6d67.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-small {
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+/* --- 4. Іздеу панелі (Search Bar Card) --- */
+.search-bar {
+    background: #ffffff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 850px;
+    position: absolute;
+    bottom: -35px;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 15px;
+    text-align: left;
+}
+
+.search-item span {
+    font-size: 20px;
+}
+
+.search-item small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+}
+
+.search-item strong {
+    font-size: 15px;
+    color: #111;
+}
+
+.search-btn {
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #c52233;
+}
+
+/* --- 5. Төменгі ақпараттық секция (Reasons & Info) --- */
+.reasons-section {
+    max-width: 1200px;
+    margin: 100px auto 60px;
+    padding: 0 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.reasons-list, .home-info-text {
+    flex: 1;
+}
+
+.reasons-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0d1b2a;
+}
+
+.reasons-list ol {
+    padding-left: 20px;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.home-info-text p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0d1b2a;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e63946;
+}
+
+/* --- 6. Contact Form Styling (Added) --- */
+.contact-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h1 {
+    color: #0d1b2a;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #0d1b2a;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}

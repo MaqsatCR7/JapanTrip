@@ -1,0 +1,1434 @@
+/* =====================================================
+   TRIP TO JAPAN
+   Main Stylesheet
+   ===================================================== */
+
+
+/* ================= GOOGLE FONT ================= */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap'
+);
+
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #17263c;
+    line-height: 1.6;
+}
+
+
+h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #17263c;
+}
+
+
+p {
+    font-size: 15px;
+    color: #4b5b70;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+/* ================= HEADER ================= */
+
+#main-header {
+    width: 100%;
+    height: 82px;
+
+    background: #122238;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: relative;
+    z-index: 10;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo-circle {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            to top,
+            #d92332 0 38%,
+            #ffffff 38% 45%,
+            #d92332 45% 100%
+        );
+
+    border: 2px solid rgba(255,255,255,0.9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.logo-text h2 {
+    color: white;
+    font-size: 21px;
+    margin: 0;
+}
+
+
+.logo-text p {
+    color: #d6dce5;
+    font-size: 10px;
+    margin: 0;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.nav-menu {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+}
+
+
+.nav-menu a {
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 30px 0;
+
+    transition: 0.3s;
+}
+
+
+.nav-menu a:hover {
+    color: #f04452;
+}
+
+
+.nav-menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    height: 3px;
+
+    background: #ed3947;
+
+    left: 0;
+    right: 0;
+
+    bottom: 18px;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   HOME PAGE
+   ===================================================== */
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(8, 20, 38, 0.48),
+            rgba(8, 20, 38, 0.72)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=2000&q=90"
+        );
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+}
+
+
+.hero-content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+
+.hero-small {
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 17px;
+    letter-spacing: 2px;
+
+    margin-bottom: 4px;
+}
+
+
+.hero h1 {
+    color: white;
+
+    font-size: 82px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero-description {
+    color: white;
+
+    max-width: 520px;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= SEARCH BOX ================= */
+
+.search-box {
+    width: 100%;
+    max-width: 920px;
+
+    background: white;
+
+    min-height: 74px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 7px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+.search-item {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 20px;
+
+    border-right: 1px solid #e4e8ee;
+}
+
+
+.search-icon {
+    font-size: 20px;
+}
+
+
+.search-item small {
+    display: block;
+
+    color: #7a8697;
+
+    font-size: 11px;
+}
+
+
+.search-item strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: #17263c;
+}
+
+
+.search-button {
+    width: 125px;
+
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 6px;
+
+    background: #d92736;
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.search-button:hover {
+    background: #b91f2d;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= COMMON SECTION ================= */
+
+.section {
+    padding: 70px 6%;
+}
+
+
+/* ================= REASONS ================= */
+
+.reasons {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.7fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.reasons-list h2 {
+    font-size: 30px;
+
+    margin-bottom: 28px;
+}
+
+
+.reasons-list li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 15px;
+
+    color: #43546a;
+
+    font-size: 14px;
+}
+
+
+.reasons-list li span {
+    width: 24px;
+    height: 24px;
+
+    background: #d92736;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.home-info {
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 35px;
+
+    align-items: center;
+}
+
+
+.home-info img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.home-info-text h2 {
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+
+.home-info-text p {
+    margin-bottom: 22px;
+
+    max-width: 400px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #d92736;
+
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    background: #b91f2d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   PAGE HERO
+   ===================================================== */
+
+.page-hero {
+    min-height: 230px;
+
+    background:
+        linear-gradient(
+            rgba(8, 20, 38, 0.45),
+            rgba(8, 20, 38, 0.7)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=2000&q=90"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 50px 7%;
+}
+
+
+.page-hero h1 {
+    color: white;
+
+    font-size: 48px;
+
+    margin-bottom: 8px;
+}
+
+
+.page-hero p {
+    color: white;
+
+    font-size: 16px;
+}
+
+
+.contact-hero {
+    background-image:
+        linear-gradient(
+            rgba(8,20,38,0.45),
+            rgba(8,20,38,0.72)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=2000&q=90"
+        );
+}
+
+
+.tours-hero {
+    background-image:
+        linear-gradient(
+            rgba(8,20,38,0.45),
+            rgba(8,20,38,0.72)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=2000&q=90"
+        );
+}
+
+
+.about-hero {
+    background-image:
+        linear-gradient(
+            rgba(8,20,38,0.4),
+            rgba(8,20,38,0.7)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=2000&q=90"
+        );
+}
+
+
+/* =====================================================
+   CONTACT PAGE
+   ===================================================== */
+
+.contact-section {
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 45px;
+
+    background: #f5f7fa;
+}
+
+
+/* ================= FORM ================= */
+
+.form-container {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 25px rgba(20,40,70,0.07);
+}
+
+
+.form-container h2 {
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+
+.form-intro {
+    margin-bottom: 25px;
+}
+
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+
+.form-group > label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #26364c;
+
+    margin-bottom: 7px;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    border: 1px solid #dbe1e8;
+
+    border-radius: 6px;
+
+    padding: 12px 14px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+
+    color: #26364c;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #d92736;
+
+    box-shadow: 0 0 0 3px rgba(217,39,54,0.08);
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+.radio-group {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.radio-group label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 13px;
+
+    color: #526075;
+}
+
+
+.radio-group input {
+    width: auto;
+}
+
+
+.form-button {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+/* ================= CONTACT INFO ================= */
+
+.contact-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.map-card,
+.office-card {
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    box-shadow: 0 5px 25px rgba(20,40,70,0.07);
+}
+
+
+.map-card h2,
+.office-card h2 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= FAKE MAP ================= */
+
+.japan-map {
+    height: 220px;
+
+    background: #edf3f7;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.map-japan-shape {
+    position: absolute;
+
+    width: 230px;
+    height: 150px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) rotate(-20deg);
+
+    border-radius: 55% 35% 60% 35%;
+
+    background: #d8e5eb;
+}
+
+
+.map-dot {
+    position: absolute;
+
+    color: #d92736;
+
+    font-size: 20px;
+}
+
+
+.tokyo-dot {
+    right: 30px;
+    top: 30px;
+}
+
+
+.kyoto-dot {
+    left: 85px;
+    top: 68px;
+}
+
+
+.osaka-dot {
+    left: 70px;
+    top: 90px;
+}
+
+
+.map-label {
+    position: absolute;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    color: #1c2e44;
+}
+
+
+.tokyo-label {
+    right: 28px;
+    top: 18px;
+}
+
+
+.kyoto-label {
+    left: 95px;
+    top: 55px;
+}
+
+
+.osaka-label {
+    left: 78px;
+    top: 105px;
+}
+
+
+/* ================= OFFICE ================= */
+
+.office-card {
+    display: grid;
+
+    grid-template-columns: 1fr 150px;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+.office-card p {
+    margin-bottom: 8px;
+}
+
+
+.office-card img {
+    width: 150px;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+
+/* =====================================================
+   TOURS PAGE
+   ===================================================== */
+
+.tours-section {
+    background: #f5f7fa;
+
+    display: grid;
+
+    grid-template-columns: 1fr 250px;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+.table-wrapper {
+    background: white;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(20,40,70,0.06);
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    font-size: 13px;
+}
+
+
+table th {
+    background: #172b46;
+
+    color: white;
+
+    padding: 16px;
+
+    text-align: left;
+
+    font-weight: 600;
+}
+
+
+table td {
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e7ebf0;
+
+    color: #4b5a6e;
+
+    vertical-align: middle;
+}
+
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+
+table tr:hover td {
+    background: #fafbfc;
+}
+
+
+.tour-city {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.tour-city img {
+    width: 80px;
+
+    height: 55px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+
+.tour-city strong {
+    display: block;
+
+    font-size: 15px;
+
+    color: #1a2b42;
+
+    margin-bottom: 2px;
+}
+
+
+.tour-city p {
+    font-size: 11px;
+}
+
+
+.price {
+    font-weight: 700;
+
+    color: #d92736;
+}
+
+
+/* ================= INCLUDED CARD ================= */
+
+.included-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 25px rgba(20,40,70,0.06);
+}
+
+
+.included-card h2 {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+.included-card li {
+    padding: 9px 0;
+
+    color: #526075;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+
+.included-card .btn {
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   DESTINATIONS
+   ===================================================== */
+
+.destinations {
+    background: white;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.section-title > p {
+    color: #d92736;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-title h2 {
+    font-size: 32px;
+}
+
+
+.destination-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.destination-card {
+    height: 280px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.destination-card img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.destination-card:hover img {
+    transform: scale(1.08);
+}
+
+
+.destination-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(8,20,38,0.9)
+        );
+}
+
+
+.destination-overlay h3 {
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+}
+
+
+.destination-overlay p {
+    color: #e8edf3;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   ABOUT PAGE
+   ===================================================== */
+
+.team-section {
+    background: #f5f7fa;
+}
+
+
+.team-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    box-shadow: 0 5px 25px rgba(20,40,70,0.07);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 35px rgba(20,40,70,0.12);
+}
+
+
+/* ================= TEAM IMAGE ================= */
+
+.team-image-wrapper {
+    padding: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f0f3f6;
+}
+
+
+.team-img {
+    width: 140px;
+
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.card-content {
+    padding: 25px;
+}
+
+
+.card h2 {
+    font-size: 22px;
+
+    margin-bottom: 3px;
+}
+
+
+.card h3 {
+    font-size: 12px;
+
+    color: #d92736;
+
+    margin-bottom: 15px;
+
+    font-weight: 600;
+}
+
+
+.card p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-bottom: 10px;
+}
+
+
+.socials {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.socials span {
+    background: #edf1f5;
+
+    color: #43546a;
+
+    font-size: 9px;
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+}
+
+
+/* ================= QUOTE ================= */
+
+.team-quote {
+    text-align: center;
+
+    margin-top: 55px;
+}
+
+
+.team-quote p {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #526075;
+}
+
+
+.torii {
+    font-size: 35px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    min-height: 65px;
+
+    background: #122238;
+
+    color: #dce3eb;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 6%;
+}
+
+
+footer p {
+    color: #dce3eb;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    #main-header {
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+
+    .nav-menu a {
+        padding: 8px 0;
+    }
+
+
+    .nav-menu a.active::after {
+        bottom: -3px;
+    }
+
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+
+    .search-box {
+        flex-direction: column;
+
+        padding: 12px;
+    }
+
+
+    .search-item {
+        width: 100%;
+
+        border-right: none;
+
+        border-bottom: 1px solid #e4e8ee;
+    }
+
+
+    .search-button {
+        width: 100%;
+    }
+
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-section,
+    .tours-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+
+    .page-hero h1 {
+        font-size: 38px;
+    }
+
+
+    .section {
+        padding: 50px 5%;
+    }
+
+
+    .home-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .team-image-wrapper {
+        padding: 30px;
+    }
+
+
+    .tour-city img {
+        width: 60px;
+
+        height: 50px;
+    }
+
+
+    table {
+        font-size: 11px;
+    }
+
+
+    table th,
+    table td {
+        padding: 10px;
+    }
+
+
+    .office-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .office-card img {
+        width: 100%;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 5px;
+
+        padding: 15px;
+    }
+
+}
