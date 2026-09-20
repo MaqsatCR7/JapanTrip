@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #17263c;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =====================================================
+   TASK 3: GRID PAGE LAYOUT (Header, Sidebar, Main, Footer)
+   ===================================================== */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.main-header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main-content { grid-area: main; padding: 40px; }
+.main-footer { grid-area: footer; }
+
+/* =====================================================
+   TASK 1: FLEXBOX NAVIGATION BAR
+   ===================================================== */
+.main-header {
+    background-color: #122238;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Logo left, links right */
+    align-items: center; /* Vertically centered */
+    padding: 18px 5%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-badge {
+    width: 42px;
+    height: 42px;
+    background: #d92736;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.logo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Spacing between links */
+    align-items: center;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 6px 0;
+    position: relative;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #f04452;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f04452;
+    border-radius: 2px;
+}
+
+/* =====================================================
+   SIDEBAR STYLES (Grid Area Element)
+   ===================================================== */
+.sidebar {
+    background-color: #1a2b42;
+    color: #ffffff;
+    padding: 35px 22px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d92736;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.sidebar ul li {
+    margin-bottom: 14px;
+}
+
+.sidebar ul li a {
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+    color: #f04452;
+    padding-left: 6px;
+}
+
+.sidebar-card {
+    margin-top: 40px;
+    background: rgba(255,255,255,0.06);
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #d92736;
+}
+
+.sidebar-card h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.sidebar-card p {
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+/* =====================================================
+   PAGE HERO & TITLES
+   ===================================================== */
+.hero-banner {
+    background: linear-gradient(rgba(18,34,56,0.65), rgba(18,34,56,0.85)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80') center/cover;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.hero-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    font-size: 16px;
+    color: #e2e8f0;
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #122238;
+}
+
+/* =====================================================
+   TASK 2: FLEXBOX CARD ROW
+   ===================================================== */
+.cards-flex-container {
+    display: flex;
+    gap: 25px; /* Consistent gaps */
+    margin-bottom: 40px;
+}
+
+.flex-card {
+    flex: 1; /* Equal width and height */
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover setup */
+}
+
+/* Simple Hover Effect: Lift + Shadow */
+.flex-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.flex-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.flex-card-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.flex-card-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #122238;
+}
+
+.flex-card-content p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background: #d92736;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b91f2d;
+}
+
+/* =====================================================
+   TASK 4: GRID IMAGE GALLERY WITH HOVER CAPTIONS
+   ===================================================== */
+.gallery-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal width columns */
+    gap: 20px; /* Consistent spacing */
+    margin-bottom: 40px;
+}
+
+.gallery-card {
+    position: relative;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Caption Overlay Effect */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 34, 56, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.gallery-overlay h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gallery-overlay p {
+    font-size: 12px;
+    color: #f04452;
+    margin-top: 4px;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1; /* Revealed on hover */
+}
+
+/* =====================================================
+   TABLES & FORMS (TOURS & CONTACT PAGES)
+   ===================================================== */
+.table-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background: #122238;
+    color: white;
+    text-align: left;
+    padding: 16px 20px;
+}
+
+table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+table tr:hover {
+    background: #f8fafc;
+}
+
+.price-text {
+    color: #d92736;
+    font-weight: 700;
+}
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    max-width: 650px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #d92736;
+}
+
+/* =====================================================
+   FOOTER (Grid Area Element)
+   ===================================================== */
+.main-footer {
+    background: #122238;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* =====================================================
+   RESPONSIVE LAYOUT
+   ===================================================== */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .cards-flex-container {
+        flex-direction: column;
+    }
+
+    .gallery-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .gallery-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
